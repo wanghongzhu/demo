@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>王红珠的个人博客</title>
+  
+  <subtitle>王红珠</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://itwhz.top/"/>
+  <updated>2019-04-17T13:44:24.917Z</updated>
+  <id>http://itwhz.top/</id>
+  
+  <author>
+    <name>王红珠</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打印九九乘法表的业务逻辑</title>
+    <link href="http://itwhz.top/2019/04/08/99/"/>
+    <id>http://itwhz.top/2019/04/08/99/</id>
+    <published>2019-04-08T05:24:59.000Z</published>
+    <updated>2019-04-17T13:44:24.917Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、九九乘法表的业务逻辑&quot;&gt;&lt;a href=&quot;#一、九九乘法表的业务逻辑&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="js基础" scheme="http://itwhz.top/categories/js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="js" scheme="http://itwhz.top/tags/js/"/>
+    
+      <category term="for循环" scheme="http://itwhz.top/tags/for%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简单的css鼠标进入动画</title>
+    <link href="http://itwhz.top/2019/04/08/css/"/>
+    <id>http://itwhz.top/2019/04/08/css/</id>
+    <published>2019-04-08T05:24:59.000Z</published>
+    <updated>2019-04-17T13:44:15.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本篇讲述的动画效果均基于 2d转化–&amp;gt;&lt;code&gt;transform&lt;/code&gt; 与 过渡–&amp;gt;&lt;code&gt;transition&lt;/code&gt;相结合，简单且实用。&lt;/p&gt;
+&lt;p&gt;应用时注意div基础样式需自行定义。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="css" scheme="http://itwhz.top/categories/css/"/>
+    
+    
+      <category term="transform" scheme="http://itwhz.top/tags/transform/"/>
+    
+      <category term="transition" scheme="http://itwhz.top/tags/transition/"/>
+    
+  </entry>
+  
+</feed>
