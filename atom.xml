@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://itwhz.top/"/>
-  <updated>2019-04-20T04:20:06.589Z</updated>
+  <updated>2019-04-22T03:51:12.348Z</updated>
   <id>http://itwhz.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue(一)使用脚手架搭建项目结构</title>
+    <link href="http://itwhz.top/2019/04/22/vue%E4%BD%BF%E7%94%A8%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://itwhz.top/2019/04/22/vue使用脚手架搭建项目结构/</id>
+    <published>2019-04-22T00:25:52.000Z</published>
+    <updated>2019-04-22T03:51:12.348Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是vue-cli&quot;&gt;&lt;a href=&quot;#什么是vue-cli&quot; class=&quot;headerlink&quot; title=&quot;什么是vue-cli&quot;&gt;&lt;/a&gt;什么是vue-cli&lt;/h2&gt;&lt;p&gt;vue-cli
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://itwhz.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://itwhz.top/tags/Vue/"/>
+    
+      <category term="vue-cli" scheme="http://itwhz.top/tags/vue-cli/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打印九九乘法表的业务逻辑</title>
     <link href="http://itwhz.top/2019/04/08/99/"/>
     <id>http://itwhz.top/2019/04/08/99/</id>
     <published>2019-04-08T05:24:59.000Z</published>
-    <updated>2019-04-20T04:20:06.589Z</updated>
+    <updated>2019-04-22T03:51:01.801Z</updated>
     
     <summary type="html">
     
@@ -49,7 +77,7 @@
     <link href="http://itwhz.top/2019/04/08/css/"/>
     <id>http://itwhz.top/2019/04/08/css/</id>
     <published>2019-04-08T05:24:59.000Z</published>
-    <updated>2019-04-20T04:18:44.842Z</updated>
+    <updated>2019-04-22T03:51:09.448Z</updated>
     
     <summary type="html">
     

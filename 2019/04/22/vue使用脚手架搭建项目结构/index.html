@@ -4,11 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="打印九九乘法表的业务逻辑, 王红珠">
-    <meta name="description" content="一、九九乘法表的业务逻辑此处以打印*为例。两层for循环嵌套，第一次外层for循环打印一颗*,第二次外层for循环打印两颗*，以此类推……结论为内层循环次数和外层循环次数一致。
-二、九九乘法表的两种打印方式1) 在控制台打印效果图如下：
+    <meta name="keywords" content="Vue(一)使用脚手架搭建项目结构, 王红珠">
+    <meta name="description" content="什么是vue-clivue-cli 是一个脚手架工具，可以帮助开发者快速创建 vue 项目需要的骨架文件
+官网
 
-">
+有什么好处
+不必自己搭建项目主结构文件目录
+不必自己安装项目通用功能模块
+不必自己给webpack做主要配置和loader安装">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>打印九九乘法表的业务逻辑 | 王红珠</title>
+    <title>Vue(一)使用脚手架搭建项目结构 | 王红珠</title>
     <link rel="icon" type="image/png" href="/nihao.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +263,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        打印九九乘法表的业务逻辑
+                        Vue(一)使用脚手架搭建项目结构
                     </div>
                 </div>
             </div>
@@ -377,12 +380,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/js/" target="_blank">
-                                <span class="chip bg-color">js</span>
+                            <a href="/tags/Vue/" target="_blank">
+                                <span class="chip bg-color">Vue</span>
                             </a>
                         
-                            <a href="/tags/for循环/" target="_blank">
-                                <span class="chip bg-color">for循环</span>
+                            <a href="/tags/vue-cli/" target="_blank">
+                                <span class="chip bg-color">vue-cli</span>
                             </a>
                         
                     </div>
@@ -393,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/js基础/" class="post-category" target="_blank">
-                                js基础
+                            <a href="/categories/Vue/" class="post-category" target="_blank">
+                                Vue
                             </a>
                         
                     </div>
@@ -405,21 +408,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-04-08
+                    2019-04-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        269
+                        908
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        3 分
                     </div>
                     
                 
@@ -435,62 +438,99 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、九九乘法表的业务逻辑"><a href="#一、九九乘法表的业务逻辑" class="headerlink" title="一、九九乘法表的业务逻辑"></a>一、九九乘法表的业务逻辑</h2><p>此处以打印<code>*</code>为例。两层<code>for</code>循环嵌套，第一次外层<code>for</code>循环打印一颗<code>*</code>,第二次外层<code>for</code>循环打印两颗<code>*</code>，以此类推……结论为内层循环次数和外层循环次数一致。</p>
-<h2 id="二、九九乘法表的两种打印方式"><a href="#二、九九乘法表的两种打印方式" class="headerlink" title="二、九九乘法表的两种打印方式"></a>二、九九乘法表的两种打印方式</h2><h4 id="1-在控制台打印"><a href="#1-在控制台打印" class="headerlink" title="1) 在控制台打印"></a>1) 在控制台打印</h4><p>效果图如下：</p>
-<p><img src="/2019/04/08/99/1.png" alt></p>
-<p>代码如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> <span class="token number">9</span> <span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> j <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        num <span class="token operator">+</span><span class="token operator">=</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">'x'</span> <span class="token operator">+</span> j <span class="token operator">+</span> <span class="token string">'='</span> <span class="token operator">+</span> i<span class="token operator">*</span>j <span class="token operator">+</span><span class="token string">'\t'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+                <h2 id="什么是vue-cli"><a href="#什么是vue-cli" class="headerlink" title="什么是vue-cli"></a>什么是vue-cli</h2><p>vue-cli 是一个<strong>脚手架</strong>工具，可以帮助开发者快速创建 vue 项目需要的<strong>骨架</strong>文件</p>
+<p><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noopener">官网</a></p>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555336054399.png" alt></p>
+<h2 id="有什么好处"><a href="#有什么好处" class="headerlink" title="有什么好处"></a>有什么好处</h2><ul>
+<li>不必自己搭建项目主结构文件目录</li>
+<li>不必自己安装项目通用功能模块</li>
+<li>不必自己给webpack做主要配置和loader安装配置</li>
+<li>使得开发人员的全部精力集中在业务层面上</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>运行如下指令，安装 vue-cli工具</p>
+<p>(带上 -g 参数，设置为全局安装，使得在系统的任何目录都可以使用)</p>
+<pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">-</span>g vue<span class="token operator">-</span>cli            <span class="token comment" spellcheck="true">// 安装操作</span>
+npm un <span class="token operator">-</span>g vue<span class="token operator">-</span>cli                <span class="token comment" spellcheck="true">// 卸载操作</span>
 </code></pre>
-<h4 id="2-在浏览器上输出"><a href="#2-在浏览器上输出" class="headerlink" title="2)在浏览器上输出"></a>2)在浏览器上输出</h4><p>效果图如下：</p>
-<p><img src="/2019/04/08/99/2.png" alt></p>
-<p>样式代码如下：</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">&lt;style>
-    table </span><span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
-        <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto <span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-     <span class="token comment" spellcheck="true">/* 隔行变色 */</span>
-    <span class="token selector">tr<span class="token pseudo-class">:nth-child(2n)</span></span><span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-     <span class="token comment" spellcheck="true">/* 隔行变色 */</span>
-    <span class="token selector">tr<span class="token pseudo-class">:nth-child(2n+1)</span></span><span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token selector">td </span><span class="token punctuation">{</span>
-        <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
-        <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#000</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token selector">tr<span class="token pseudo-class">:nth-child(2n)</span> td<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">201</span>, <span class="token number">14</span>, <span class="token number">191</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token punctuation">}</span>
-    <span class="token selector">tr<span class="token pseudo-class">:nth-child(2n+1)</span> td<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
-        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">26</span>, <span class="token number">211</span>, <span class="token number">224</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-&lt;/style>
+<blockquote>
+<p>vue-cli分为2和3两个版本，前期先使用2版本即vue-cli，后期再对3版本做说明</p>
+</blockquote>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555553312234.png" alt></p>
+<p>查看安装好的vue-cli</p>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555553375822.png" alt></p>
+<p>vue-cli工具安装完毕就可以通过如下指令初始化项目了(我们此处以pro01的项目名为例)</p>
+<pre class=" language-javascript"><code class="language-javascript">vue init webpack my<span class="token operator">-</span>project   <span class="token comment" spellcheck="true">// 初始化项目</span>
 </code></pre>
-<p>js代码如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;table>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> <span class="token number">9</span> <span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;tr>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> j <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;td>'</span><span class="token operator">+</span>i <span class="token operator">+</span> <span class="token string">'x'</span> <span class="token operator">+</span> j <span class="token operator">+</span> <span class="token string">'='</span> <span class="token operator">+</span> i<span class="token operator">*</span>j<span class="token operator">+</span><span class="token string">'&lt;/td>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;/tr>'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;/table>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<p>接下来会提示如下参数选项(参考配置即可)：</p>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555553919763.png" alt></p>
+<p>命令执行完毕会在…\Code\目录下自动形成pro01文件目录，内部是创建好的项目主结构文件</p>
+<p>效果如下：</p>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555554030490.png" alt></p>
+<p>主结构文件说明：</p>
+<pre><code>|-- build                            // 项目构建(webpack)相关代码
+|   |-- build.js                         // 生产环境构建代码
+|   |-- check-version.js                 // 检查node、npm等版本
+|   |-- logo.png                         // logo图片
+|   |-- utils.js                         // 构建工具相关
+|   |-- vue-loader.conf.js                // vue-loader配置
+|   |-- webpack.base.conf.js**             // webpack基础配置
+|   |-- webpack.dev.conf.js**              // webpack开发环境配置
+|   |-- webpack.prod.conf.js**             // webpack生产环境配置
+|-- config                           // 项目开发环境配置
+|   |-- dev.env.js                       // 开发环境配置
+|   |-- index.js**                         // 项目主要配置(包括监听端口，打包路径等)
+|   |-- prod.env.js                      // 生产环境配置
+|-- src                              // 源码目录
+|   |-- assets                           // 静态资源 
+|   |-- components**                     // vue公共组件
+|   |-- router**                         // vue路由
+|   |-- App.vue**                        // 页面入口文件
+|   |-- main.js**                        // 程序入口文件，加载各种公共组件
+|-- static                           // 静态文件，比如一些图片，json数据等
+|   |-- data                           // 群聊分析得到的数据用于数据可视化
+|-- .babelrc                         // ES6语法编译配置
+|-- .editorconfig                    // 定义代码格式
+|-- .gitignore                       // git上传需要忽略的文件格式
+|-- .postcssrc.js                    // post-loader的插件配置文件
+|-- index.html**                       // 入口页面
+|-- package.json                     // 项目基本信息
+|-- package-lock.json                // 锁定当前安装的包的依赖
+|-- README.md                        // 项目说明
+</code></pre><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>根据需要可以给<code>vue-cli</code>创建好的项目做基本配置</p>
+<ul>
+<li><p>给package.json做<code>打包</code>参数配置</p>
+<blockquote>
+<p>line: 在线运行指令参数</p>
+<p>pack：物理打包指令参数</p>
+</blockquote>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555554374574.png" alt></p>
+</li>
+</ul>
+<ul>
+<li>在config/index.js文件中设置项目运行<code>主机名</code>、<code>端口</code>、<code>自动开启浏览器</code> 的设置</li>
+</ul>
+<pre><code>autoOpenBrowser: true
+</code></pre><blockquote>
+<p>在线运行项目会自动开启浏览器</p>
+</blockquote>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555554507418.png" alt></p>
+<p>运行效果：</p>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555554586720.png" alt></p>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555554597599.png" alt></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ol>
+<li>vue-cli脚手架工具，可以辅助快速创建项目结构文件</li>
+<li>安装完毕系统就有一个<code>vue</code>的指令可供生成项目主结构文件使用</li>
+<li>创建项目主结构文件的同时，可以根据需要同时安装 路由、vue、eslint等常用功能包</li>
+</ol>
+<h2 id="给项目安装less扩展包"><a href="#给项目安装less扩展包" class="headerlink" title="给项目安装less扩展包"></a>给项目安装less扩展包</h2><p>通过vue-cli创建的项目主结构文件，默认没有less扩展包的，请安装</p>
+<p>运行指令：</p>
+<pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">-</span>D less less<span class="token operator">-</span>loader
 </code></pre>
+<p><img src="/2019/04/22/vue使用脚手架搭建项目结构/1555560395883.png" alt></p>
+<p>(安装完毕，不需要配置，重启webpack即可)</p>
+<h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><p>vue-cli创建项目主结构文件的同时也会创建项目的文件目录，因此不要做重复了</p>
+<p>创建好的项目主结构文件可以做自定义配置，例如：package.json、config/index.js、.prettierrc等</p>
+<p>vue-cli默认没有安装less-loader/less 依赖包，需要自行安装</p>
 
             </div>
             <hr>
@@ -638,7 +678,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
                     </span>
                     <a href="http://itwhz.top" class="b-link-green">王红珠</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/04/08/99/" class="b-link-green">打印九九乘法表的业务逻辑</a>
+                    <a href="/2019/04/22/vue使用脚手架搭建项目结构/" class="b-link-green">Vue(一)使用脚手架搭建项目结构</a>
                 </p>
             </div>
         </div>
@@ -661,7 +701,8 @@ document<span class="token punctuation">.</span><span class="token function">wri
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/04/22/vue使用脚手架搭建项目结构/">
                     <div class="card-image">
@@ -681,9 +722,9 @@ document<span class="token punctuation">.</span><span class="token function">wri
 不必自己安装项目通用功能模块
 不必自己给webpack做主要配置和loader安装</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -696,6 +737,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -718,21 +760,20 @@ document<span class="token punctuation">.</span><span class="token function">wri
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/04/08/css/">
+                <a href="/2019/04/08/99/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="简单的css鼠标进入动画">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="打印九九乘法表的业务逻辑">
                         
-                        <span class="card-title">简单的css鼠标进入动画</span>
+                        <span class="card-title">打印九九乘法表的业务逻辑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">本篇讲述的动画效果均基于 2d转化–&gt;transform 与 过渡–&gt;transition相结合，简单且实用。
-应用时注意div基础样式需自行定义。
-文字和盒子共同旋转、放大效果图：
+                    <div class="summary block-with-text">一、九九乘法表的业务逻辑此处以打印*为例。两层for循环嵌套，第一次外层for循环打印一颗*,第二次外层for循环打印两颗*，以此类推……结论为内层循环次数和外层循环次数一致。
+二、九九乘法表的两种打印方式1) 在控制台打印效果图如下：
 
-注：为了使过渡效果更佳，我们应用了贝塞尔曲</div>
+</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-08
@@ -741,8 +782,8 @@ document<span class="token punctuation">.</span><span class="token function">wri
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/css/" class="post-category" target="_blank">
-                                    css
+                            <a href="/categories/js基础/" class="post-category" target="_blank">
+                                    js基础
                                 </a>
                             
                             
@@ -752,12 +793,12 @@ document<span class="token punctuation">.</span><span class="token function">wri
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/transform/" target="_blank">
-                        <span class="chip bg-color">transform</span>
+                    <a href="/tags/js/" target="_blank">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
-                    <a href="/tags/transition/" target="_blank">
-                        <span class="chip bg-color">transition</span>
+                    <a href="/tags/for循环/" target="_blank">
+                        <span class="chip bg-color">for循环</span>
                     </a>
                     
                 </div>
