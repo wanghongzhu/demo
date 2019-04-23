@@ -1,0 +1,1241 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Vue(二)使用Element-ui组件库渲染后台系统登录页面, 王红珠">
+    <meta name="description" content="我们想要实现的最终效果为:
+  使用Element-ui组件库渲染后台系统登录页面/1555817105664.png)
+一、项目初始化执行指令
+vue init webpack vue-shop-pro
+
+把项目的结构文件创建出来
+使用E">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Vue(二)使用Element-ui组件库渲染后台系统登录页面 | 王红珠</title>
+    <link rel="icon" type="image/png" href="/nihao.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/hello.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">王红珠</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/hello.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">王红珠</div>
+        <div class="logo-desc">
+            
+            从来没有真正的绝境，只有心灵的迷途
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/wanghongzhu/wanghongzhu.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/wanghongzhu/wanghongzhu.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewbox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Vue(二)使用Element-ui组件库渲染后台系统登录页面
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Vue/" target="_blank">
+                                <span class="chip bg-color">Vue</span>
+                            </a>
+                        
+                            <a href="/tags/Element-ui组件/" target="_blank">
+                                <span class="chip bg-color">Element-ui组件</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Vue/" class="post-category" target="_blank">
+                                Vue
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-04-23
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        1.9k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        8 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>我们想要实现的最终效果为:</p>
+<p>  <img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555817105664">使用Element-ui组件库渲染后台系统登录页面/1555817105664.png)</p>
+<h2 id="一、项目初始化"><a href="#一、项目初始化" class="headerlink" title="一、项目初始化"></a>一、项目初始化</h2><p>执行指令</p>
+<pre class=" language-javascript"><code class="language-javascript">vue init webpack vue<span class="token operator">-</span>shop<span class="token operator">-</span>pro
+</code></pre>
+<p>把项目的结构文件创建出来</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555559594421">使用Element-ui组件库渲染后台系统登录页面/1555559594421.png)</p>
+<h2 id="二、项目初始配置"><a href="#二、项目初始配置" class="headerlink" title="二、项目初始配置"></a>二、项目初始配置</h2><ul>
+<li><p>在package.json中给webpack做指令配置</p>
+<pre><code>&quot;scripts&quot;: {
+  &quot;line&quot;: &quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;,
+  ...
+  &quot;pack&quot;: &quot;node build/build.js&quot;
+}
+</code></pre><blockquote>
+<p>line: 在线运行指令参数</p>
+<p>pack：物理打包指令参数</p>
+</blockquote>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555559632595">使用Element-ui组件库渲染后台系统登录页面/1555559632595.png)</p>
+</li>
+<li><p>在config/index.js中做开发配置</p>
+<pre><code>autoOpenBrowser: true
+</code></pre><blockquote>
+<p>在线运行项目会自动开启浏览器</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555559918328">使用Element-ui组件库渲染后台系统登录页面/1555559918328.png)</p>
+<h2 id="三、初始化Login-vue组件"><a href="#三、初始化Login-vue组件" class="headerlink" title="三、初始化Login.vue组件"></a>三、初始化Login.vue组件</h2><p>新建  src/components/Login.vue  文件，并设置简单内容</p>
+<p>在  src/router/index.js  文件中给Login.vue配置路由</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Login <span class="token keyword">from</span> <span class="token string">'@/components/Login'</span>
+<span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/login'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Login <span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>可以把  src/App.vue  根组件的<strong>默认图片</strong>和<strong>css样式</strong>给去除掉</p>
+</blockquote>
+<ol>
+<li><p>创建Login.vue文件并设置简单内容</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555560752890">使用Element-ui组件库渲染后台系统登录页面/1555560752890.png)</p>
+</li>
+<li><p>给Login.vue设置请求路由，具体在src/router/index.js设置</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555560793738">使用Element-ui组件库渲染后台系统登录页面/1555560793738.png)</p>
+</li>
+<li><p>给App.vue把默认图片和css样式去除</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555560844404">使用Element-ui组件库渲染后台系统登录页面/1555560844404.png)</p>
+</li>
+<li><p>访问效果</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555560855680">使用Element-ui组件库渲染后台系统登录页面/1555560855680.png)</p>
+</li>
+</ol>
+<h2 id="四、绘制登录页面背景"><a href="#四、绘制登录页面背景" class="headerlink" title="四、绘制登录页面背景"></a>四、绘制登录页面背景</h2><h3 id="创建global-css样式文件"><a href="#创建global-css样式文件" class="headerlink" title="创建global.css样式文件"></a>创建global.css样式文件</h3><p>为了使得全部的组件都拥有<strong>统一</strong>的css样式，现在创建全局样式文件 src/assets/css/global.css</p>
+<p>并填充如下内容</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">html,body,<span class="token id">#app</span></span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555561369005">使用Element-ui组件库渲染后台系统登录页面/1555561369005.png)</p>
+<h3 id="应用global-css"><a href="#应用global-css" class="headerlink" title="应用global.css"></a>应用global.css</h3><p>为了使得global.css生效，请在 src/main.js  主入口文件中做引入操作</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">'./assets/css/global.css'</span>
+</code></pre>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555561452968">使用Element-ui组件库渲染后台系统登录页面/1555561452968.png)</p>
+<h3 id="给登录页面绘制背景"><a href="#给登录页面绘制背景" class="headerlink" title="给登录页面绘制背景"></a>给登录页面绘制背景</h3><p>给  src/components/Login.vue  文件设置如下内容</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>用户登录系统<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>less<span class="token punctuation">"</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">></span></span><span class="token style language-css">
+<span class="token selector"><span class="token id">#login-container</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#2b4b6b</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+</code></pre>
+<blockquote>
+<p>script标签 不需要时，可以暂时不用设置</p>
+</blockquote>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555561476687">使用Element-ui组件库渲染后台系统登录页面/1555561476687.png)</p>
+<p>现在登录页面效果：</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555561490567">使用Element-ui组件库渲染后台系统登录页面/1555561490567.png)</p>
+<blockquote>
+<p>上图的12306端口如果需要可以通过修改config/index.js配置文件设置</p>
+</blockquote>
+<h2 id="五、绘制登录盒子"><a href="#五、绘制登录盒子" class="headerlink" title="五、绘制登录盒子"></a>五、绘制登录盒子</h2><ol>
+<li><p>准备素材图片   src/assets/Vue(二)使用Element-ui组件库渲染后台系统登录页面/logo.png</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555562376188">使用Element-ui组件库渲染后台系统登录页面/1555562376188.png)</p>
+</li>
+<li><p>给 src/components/Login.vue  文件做内容设置</p>
+</li>
+</ol>
+<ul>
+<li><p>template标签内容</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        &lt;Vue(二)使用Element-ui组件库渲染后台系统登录页面/ src="../assets/Vue(二)使用Element-ui组件库渲染后台系统登录页面/logo.png" alt>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>style标签内容</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">&lt;style lang="less" scoped>
+<span class="token id">#login-container</span> </span><span class="token punctuation">{</span>
+  <span class="token selector">background-color: <span class="token id">#2b4b6b</span>;
+  height: 100%;
+  overflow: hidden;
+  <span class="token id">#login-box</span> </span><span class="token punctuation">{</span>
+    <span class="token selector">width: 450px;
+    height: 304px;
+    background-color: <span class="token id">#fff</span>;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    <span class="token id">#logo-box</span> </span><span class="token punctuation">{</span>
+      <span class="token selector">width: 130px;
+      height: 130px;
+      border: 1px solid <span class="token id">#eee</span>;
+      border-radius: 50%;
+      padding: 8px;
+      box-shadow: 0 0 10px <span class="token id">#eee</span>;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: <span class="token id">#fff</span>;
+      Vue(二)使用Element-ui组件库渲染后台系统登录页面/ </span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#eee</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+&lt;/style>
+</code></pre>
+</li>
+</ul>
+<p>在Login.vue中具体实现：</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555562410589">使用Element-ui组件库渲染后台系统登录页面/1555562410589.png)</p>
+<p>style样式的具体代码：</p>
+<pre><code>&lt;style lang=&quot;less&quot; scoped&gt;
+  .login-container{
+    background-color:#2b4b6b;
+    height:100%;
+    overflow: hidden;
+    .login-box{
+      width:450px;
+      height:304px;
+      background-color:#fff;
+      border-radius: 4px;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      .avatar-box{
+        width:130px;
+        height:130px;
+        border:1px solid #eee;
+        border-radius: 50%;
+        padding:8px;
+        box-shadow: 0 0 10px #eee;
+        position:absolute;
+        left:50%;
+        transform:translate(-50%,-50%);
+        background-color:#fff;
+        Vue(二)使用Element-ui组件库渲染后台系统登录页面/{
+          width:100%;
+          height:100%;
+          border-radius: 50%;
+          background-color:#eee;
+        }
+      }
+    }
+  }
+&lt;/style&gt;
+</code></pre><p>现在登录窗口盒子和logo图片效果为：</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555562466639">使用Element-ui组件库渲染后台系统登录页面/1555562466639.png)</p>
+<h2 id="六、绘制登录表单"><a href="#六、绘制登录表单" class="headerlink" title="六、绘制登录表单"></a>六、绘制登录表单</h2><h3 id="配置ElementUI"><a href="#配置ElementUI" class="headerlink" title="配置ElementUI"></a>配置ElementUI</h3><ul>
+<li><p><a href="https://element.eleme.cn/#/zh-CN" target="_blank" rel="noopener">Element-ui参考网址</a></p>
+</li>
+<li><p>运行指令安装element-ui</p>
+<pre><code>npm install element-ui
+</code></pre><p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555813418061">使用Element-ui组件库渲染后台系统登录页面//1555813418061.png)</p>
+</li>
+<li><p>安装plugin插件(使得element-ui可以做  按需引入)</p>
+<pre><code>npm install babel-plugin-component -D 
+</code></pre><p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555813461151">使用Element-ui组件库渲染后台系统登录页面//1555813461151.png)</p>
+</li>
+<li><p>修改  .babelrc  配置文件给plugin做<strong>按需引入</strong>配置</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">[</span>
+    <span class="token string">"component"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"libraryName"</span><span class="token punctuation">:</span> <span class="token string">"element-ui"</span><span class="token punctuation">,</span>
+      <span class="token string">"styleLibraryName"</span><span class="token punctuation">:</span> <span class="token string">"theme-chalk"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555813497005">使用Element-ui组件库渲染后台系统登录页面//1555813497005.png)</p>
+</li>
+<li><p>在项目主入口文件 src/main.js 中给element-ui做引入配置</p>
+<pre><code>import ElementUI from &#39;element-ui&#39;
+Vue.use(ElementUI)
+</code></pre><blockquote>
+<p>不需要引入相关的css文件，因为已经做了“按需引入”了</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555813587617">使用Element-ui组件库渲染后台系统登录页面//1555813587617.png)</p>
+<p>之后重启webpack</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555813636315">使用Element-ui组件库渲染后台系统登录页面//1555813636315.png)</p>
+<h3 id="绘制各个表单域"><a href="#绘制各个表单域" class="headerlink" title="绘制各个表单域"></a>绘制各个表单域</h3><p>绘制 用户名、密码、登录、重置 按钮等表单域</p>
+<p>给 src/components/Login.vue  文件做内容设置</p>
+<ul>
+<li><p>template标签内容</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>avatar-box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../assets/Vue(二)使用Element-ui组件库渲染后台系统登录页面//logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loginFormRef<span class="token punctuation">"</span></span> <span class="token attr-name">:model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loginForm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loginForm.username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loginForm.userpass<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-row</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-col</span> <span class="token attr-name">push</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>15<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>登录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>重置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-col</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-row</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+</code></pre>
+<blockquote>
+<p>ref=”loginFormRef”   使得可以通过Vue方法找到当前的form表单</p>
+<p>:model=”loginForm”     v-bind:属性绑定，把表单域信息对象绑定给model属性</p>
+<p>​                    model在此处就是一个普通的属性名称，与v-model没有任何关系</p>
+<p>el-row/el-col          是对内容列进行定位的</p>
+<p>:offset=”15”              当前列的左侧的间隔格数</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>script内容</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 用户登录表单数据对象(用户名、密码)</span>
+      loginForm<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        username<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        userpass<span class="token punctuation">:</span> <span class="token string">''</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>style样式部分</p>
+<pre class=" language-css"><code class="language-css">  <span class="token selector"><span class="token class">.login-box</span> </span><span class="token punctuation">{</span>
+  <span class="token selector">……
+    <span class="token class">.el-form</span> </span><span class="token punctuation">{</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+      <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<p>在Login.vue的结构中绘制如下内容：</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555816398256">使用Element-ui组件库渲染后台系统登录页面/1555816398256.png)</p>
+<h3 id="绘制图标"><a href="#绘制图标" class="headerlink" title="绘制图标"></a>绘制图标</h3><p>element-ui提供了一些图标，但是数量有限，如果需要其他图标可以去 阿里妈妈图标库 使用更全的图标</p>
+<p><a href="https://www.iconfont.cn/" target="_blank" rel="noopener">图标库官网</a></p>
+<p>具体使用：</p>
+<ol>
+<li>把下载好的图标库文件复制到项目指定位置：</li>
+</ol>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555485937273">使用Element-ui组件库渲染后台系统登录页面/1555485937273.png)</p>
+<ol start="2">
+<li><p>在main.js中引入图标库样式文件</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 引入“图标”css样式文件</span>
+<span class="token keyword">import</span> <span class="token string">'./assets/fonts/iconfont.css'</span>
+</code></pre>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555816797687">使用Element-ui组件库渲染后台系统登录页面/1555816797687.png)</p>
+</li>
+<li><p>在Login.vue中给表单域添加图标</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loginForm.username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>prefix<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>iconfont icon-user<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loginForm.password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>prefix<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>iconfont icon-3702mima<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span>
+</code></pre>
+<p> 示例代码：</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555817092241">使用Element-ui组件库渲染后台系统登录页面/1555817092241.png)</p>
+<p>效果：</p>
+<p><img src="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/Vue(二" alt="1555817105664">使用Element-ui组件库渲染后台系统登录页面/1555817105664.png)</p>
+</li>
+</ol>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wchat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="http://itwhz.top" class="b-link-green">王红珠</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/" class="b-link-green">Vue(二)使用Element-ui组件库渲染后台系统登录页面</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/04/23/Vue(二)使用Element-ui组件库渲染后台系统登录页面/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Vue(二)使用Element-ui组件库渲染后台系统登录页面">
+                        
+                        <span class="card-title">Vue(二)使用Element-ui组件库渲染后台系统登录页面</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">我们想要实现的最终效果为:
+  使用Element-ui组件库渲染后台系统登录页面/1555817105664.png)
+一、项目初始化执行指令
+vue init webpack vue-shop-pro
+
+把项目的结构文件创建出来
+使用E</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Vue/" class="post-category" target="_blank">
+                                    Vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/" target="_blank">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                    <a href="/tags/Element-ui组件/" target="_blank">
+                        <span class="chip bg-color">Element-ui组件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/04/22/vue使用脚手架搭建项目结构/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Vue(一)使用脚手架搭建项目结构">
+                        
+                        <span class="card-title">Vue(一)使用脚手架搭建项目结构</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">什么是vue-clivue-cli 是一个脚手架工具，可以帮助开发者快速创建 vue 项目需要的骨架文件
+官网
+
+有什么好处
+不必自己搭建项目主结构文件目录
+不必自己安装项目通用功能模块
+不必自己给webpack做主要配置和loader安装</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Vue/" class="post-category" target="_blank">
+                                    Vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/" target="_blank">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                    <a href="/tags/vue-cli/" target="_blank">
+                        <span class="chip bg-color">vue-cli</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            <!-- 本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">Blinkfox</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建. -->
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">3.6k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wanghongzhu" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1334302559@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1334302559" class="tooltipped" data-tooltip="QQ联系我: 1334302559" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
