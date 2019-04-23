@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://itwhz.top/"/>
-  <updated>2019-04-23T09:52:12.505Z</updated>
+  <updated>2019-04-23T10:58:39.967Z</updated>
   <id>http://itwhz.top/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>服务端开发常识</title>
+    <link href="http://itwhz.top/2019/04/23/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B8%B8%E8%AF%86/"/>
+    <id>http://itwhz.top/2019/04/23/服务端开发常识/</id>
+    <published>2019-04-23T10:47:41.000Z</published>
+    <updated>2019-04-23T10:58:39.967Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-服务端开发总目标：&quot;&gt;&lt;a href=&quot;#1-服务端开发总目标：&quot; class=&quot;headerlink&quot; title=&quot;1.服务端开发总目标：&quot;&gt;&lt;/a&gt;1.服务端开发总目标：&lt;/h2&gt;&lt;p&gt;  网页 —&amp;gt;  静态网站 —&amp;gt; 
+        
+      
+    
+    </summary>
+    
+      <category term="开发常识" scheme="http://itwhz.top/categories/%E5%BC%80%E5%8F%91%E5%B8%B8%E8%AF%86/"/>
+    
+    
+      <category term="Web服务器" scheme="http://itwhz.top/tags/Web%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6语法基础</title>
+    <link href="http://itwhz.top/2019/04/23/ES6%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    <id>http://itwhz.top/2019/04/23/ES6语法基础/</id>
+    <published>2019-04-23T10:37:08.000Z</published>
+    <updated>2019-04-23T10:41:45.057Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/2019/04/23/ES6语法基础/ES6语法基础.jpg&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="http://itwhz.top/categories/ES6/"/>
+    
+    
+      <category term="ES6语法基础" scheme="http://itwhz.top/tags/ES6%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Git的简介、安装、使用和常用命令</title>
+    <link href="http://itwhz.top/2019/04/23/git/"/>
+    <id>http://itwhz.top/2019/04/23/git/</id>
+    <published>2019-04-23T10:10:36.000Z</published>
+    <updated>2019-04-23T10:43:09.210Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、什么是Git&quot;&gt;&lt;a href=&quot;#一、什么是Git&quot; class=&quot;headerlink&quot; title=&quot;一、什么是Git&quot;&gt;&lt;/a&gt;一、什么是Git&lt;/h2&gt;&lt;p&gt;Git是目前世界上最先进的分布式 &lt;font color=&quot;red&quot;&gt;源代码&lt;/font&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="http://itwhz.top/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://itwhz.top/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue(二)使用Element-ui组件库渲染后台系统登录页面</title>
@@ -74,6 +152,34 @@
   </entry>
   
   <entry>
+    <title>打印九九乘法表的业务逻辑</title>
+    <link href="http://itwhz.top/2019/04/08/99/"/>
+    <id>http://itwhz.top/2019/04/08/99/</id>
+    <published>2019-04-08T05:24:59.000Z</published>
+    <updated>2019-04-23T10:42:53.723Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、九九乘法表的业务逻辑&quot;&gt;&lt;a href=&quot;#一、九九乘法表的业务逻辑&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="js基础" scheme="http://itwhz.top/categories/js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="js" scheme="http://itwhz.top/tags/js/"/>
+    
+      <category term="for循环" scheme="http://itwhz.top/tags/for%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>简单的css鼠标进入动画</title>
     <link href="http://itwhz.top/2019/04/08/css/"/>
     <id>http://itwhz.top/2019/04/08/css/</id>
@@ -100,34 +206,6 @@
       <category term="transform" scheme="http://itwhz.top/tags/transform/"/>
     
       <category term="transition" scheme="http://itwhz.top/tags/transition/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打印九九乘法表的业务逻辑</title>
-    <link href="http://itwhz.top/2019/04/08/99/"/>
-    <id>http://itwhz.top/2019/04/08/99/</id>
-    <published>2019-04-08T05:24:59.000Z</published>
-    <updated>2019-04-23T10:04:58.406Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一、九九乘法表的业务逻辑&quot;&gt;&lt;a href=&quot;#一、九九乘法表的业务逻辑&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="js基础" scheme="http://itwhz.top/categories/js%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="js" scheme="http://itwhz.top/tags/js/"/>
-    
-      <category term="for循环" scheme="http://itwhz.top/tags/for%E5%BE%AA%E7%8E%AF/"/>
     
   </entry>
   
